@@ -1,4 +1,4 @@
-# 🚀 TaskFlow — MERN Stack Todo App
+# 🚀 Authentication and Todo — MERN Stack Todo App
 
 Full-stack todo application with JWT authentication built on the MERN stack.
 
@@ -69,20 +69,21 @@ mern-todo/
 
 ## API Endpoints
 
-| Method | Route | Access | Description |
-|--------|-------|--------|-------------|
-| POST | `/api/auth/register` | Public | Register user |
-| POST | `/api/auth/login` | Public | Login user |
-| GET | `/api/auth/me` | Private | Get current user |
-| GET | `/api/todos` | Private | Get all todos |
-| POST | `/api/todos` | Private | Create todo |
-| PUT | `/api/todos/:id` | Private | Update todo |
-| DELETE | `/api/todos/:id` | Private | Delete todo |
-| PATCH | `/api/todos/:id/toggle` | Private | Toggle complete |
+| Method | Route                   | Access  | Description      |
+| ------ | ----------------------- | ------- | ---------------- |
+| POST   | `/api/auth/register`    | Public  | Register user    |
+| POST   | `/api/auth/login`       | Public  | Login user       |
+| GET    | `/api/auth/me`          | Private | Get current user |
+| GET    | `/api/todos`            | Private | Get all todos    |
+| POST   | `/api/todos`            | Private | Create todo      |
+| PUT    | `/api/todos/:id`        | Private | Update todo      |
+| DELETE | `/api/todos/:id`        | Private | Delete todo      |
+| PATCH  | `/api/todos/:id/toggle` | Private | Toggle complete  |
 
 ## Setup & Run
 
 ### Prerequisites
+
 - Node.js >= 18
 - MongoDB (local or MongoDB Atlas)
 
@@ -94,6 +95,7 @@ cp .env.example .env
 ```
 
 Edit `.env`:
+
 ```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/mern-todo
@@ -128,6 +130,7 @@ Go to `http://localhost:5173` → Register → Start adding tasks!
 2. Create free cluster
 3. Get connection string
 4. Replace `MONGO_URI` in `.env`:
+
 ```
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/mern-todo
 ```

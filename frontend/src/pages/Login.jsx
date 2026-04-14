@@ -42,7 +42,7 @@ export default function Login() {
               <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <h1 className="text-3xl font-display font-bold text-white tracking-tight">TaskFlow</h1>
+          <h1 className="text-3xl font-display font-bold text-white tracking-tight">Authentication and Todo</h1>
           <p className="text-slate-400 mt-1 font-body">Sign in to your account</p>
         </div>
 

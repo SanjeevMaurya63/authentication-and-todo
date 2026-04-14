@@ -131,7 +131,7 @@ export default function Dashboard() {
                 <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <span className="font-display font-bold text-white text-lg tracking-tight">TaskFlow</span>
+            <span className="font-display font-bold text-white text-lg tracking-tight">Authentication and Todo</span>
           </div>
 
           {/* User menu */}
