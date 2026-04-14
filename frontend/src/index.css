@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #070b14;
+    color: #e2e8f0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(13, 20, 36, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-strong {
+    background: rgba(13, 20, 36, 0.85);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(56, 189, 248, 0.1);
+  }
+
+  .btn-primary {
+    @apply bg-sky-500 hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 font-display tracking-wide;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 35px rgba(14, 165, 233, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply border border-white/10 hover:border-sky-500/50 text-slate-300 hover:text-white font-medium py-3 px-6 rounded-xl transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500/60 transition-all duration-200 font-body;
+  }
+
+  .input-field:focus {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  }
+
+  .todo-card {
+    @apply glass rounded-2xl p-5 transition-all duration-300;
+  }
+
+  .todo-card:hover {
+    border-color: rgba(56, 189, 248, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(14, 165, 233, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(14, 165, 233, 0.5); }
+
+/* Background mesh */
+.bg-mesh {
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.03) 0%, transparent 70%);
+}
