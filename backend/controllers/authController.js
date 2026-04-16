@@ -11,7 +11,15 @@ const generateToken = (id) => {
 // @desc    Register user
 // @route   POST /api/auth/register
 // @access  Public
+const register = async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
 
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ success: false, message: 'Email already registered' });
+    }
 
     const user = await User.create({ name, email, password });
 
